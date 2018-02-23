@@ -1,7 +1,8 @@
 # CurlMulti-PHP
 php模拟多线程同时发起批量请求
 
-使用范例：
+### 使用范例：
+```php
 header("Content-type:text/html;charset=utf-8");
 include_once 'CurlMultiModel.php';
 
@@ -28,3 +29,4 @@ foreach ($res as $key => $val) {
 	echo "<br>";
 	echo "-----------------------------------------------------<br>";
 }
+```
