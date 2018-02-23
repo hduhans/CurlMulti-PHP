@@ -1,6 +1,13 @@
 # CurlMulti-PHP
 php模拟多线程同时发起批量请求
 
+### 原理
+使用了操作系统的多线程
+
+### 参考
+https://github.com/php/php-src/blob/master/ext/curl/interface.c#L472
+http://blog.csdn.net/loophome/article/details/53266814
+
 ### 使用范例：
 ```php
 header("Content-type:text/html;charset=utf-8");
