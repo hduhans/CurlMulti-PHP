@@ -8,6 +8,23 @@ php模拟多线程同时发起批量请求
 https://github.com/php/php-src/blob/master/ext/curl/interface.c#L472
 http://blog.csdn.net/loophome/article/details/53266814
 
+### 方法说明
+```php
+// 构建请求参数
+$curlData = Array();
+$curlData["http://localhost/Test/m"] = Array("name"=>"zhangsan","age"=>18);
+$curlData["http://localhost/Test/m"] = Array("name"=>"lisi","age"=>19);
+// 初始化对象
+$CurlMulti = new CurlMultiModel();
+// 发起get请求
+$CurlMulti->doGet($curlData); 
+// 发起post请求
+$CurlMulti->doPost($curlData); 
+// 获取请求结果
+$result = $CurlMulti->getResult();
+var_dump($result);
+```
+
 ### 使用范例：
 ```php
 header("Content-type:text/html;charset=utf-8");
